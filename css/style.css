@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    text-transform: capitalize;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+    font-family: "Work Sans", sans-serif;;
+}
+:root{
+    --soft-black:#2c4755;
+    --light-green:#10cab7;
+    --background:#f6f6f6;
+}
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+a:visited{
+    color: inherit;
+}
+nav{
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    width: 60px;
+    height: 30px;
+}
+.hover{
+    padding: 3px;
+    direction: rtl;
+}
+#s2{
+    width: 15px;
+    height: 2px;
+    background-color: var(--soft-black);
+    transition-property: width;
+    transition-duration: 1s;
+    margin: 5px 0px;
+}
+.menu:hover .hover #s2{
+    width: 30px;
+}
+#s1,#s3{
+    background-color: var(--soft-black);
+    width: 30px;
+    height: 2px;
+}
+.ul{
+    display: none;
+    width: 200px;
+    background-color: var(--background);
+}
+ul{
+    list-style: none;
+}
+li{
+    padding: 10px 20px;
+    border-top: .5px #eee solid;
+    transition-property: padding;
+    transition-duration: .5s;
+    font-weight: 400;
+}
+li:first-of-type{
+    border: none;
+}
+li:hover{
+    padding-left: 30px;
+}
+.menu:hover >.ul{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 2;
+}
+.ul::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    top: -20px;
+    right: 10px;
+    border: 10px transparent solid;
+    border-bottom-color: #eee;
+}
+.landing{
+    width:100%;
+    height: 90vh;
+    background-image: url("../imgs/landing.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    text-align: center;
+}
+.text h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--light-green);
+}
+.text p{
+    font-size: 20px;
+    margin-top:  15px ;
+    color: var(--soft-black);
+}
+.section{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: var(--background);
+}
+.section i,.services i{
+    color: var(--light-green);
+    font-size: 50px;
+}
+.services i{
+    font-size: 30px;
+}
+.text1{
+    margin-top: 20px;
+    width: 300px;
+}
+.text1 h1,.text2 h1{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 900;
+}
+.text1 p,.text2 p{
+    font-weight: 14px;
+    font-weight: 400;
+    color: rgba(151, 151, 151, 0.719);
+}
+.services{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,48%);
+    grid-template-rows: repeat(1,auto);
+    justify-content: center;
+    align-items: center;
+}
+.text2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.section1 div{
+    text-align: center;
+}
+.c1 div,.c2 div{
+    width: 85%;
+}
+#serv,#pro,#abo,#con{
+    margin:130px 0px 50px;
+    text-align: center;
+}
+#serv::before,#pro::before,#abo::before,#con::before{
+    content: "services";
+    color: grey;
+    position: absolute;
+    font-size:100px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .2;
+    font-weight: 900;
+}
+.project{
+    padding: 20px;
+    background-color: var(--background);
+    margin: 50px 0px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,50%);
+}
+#pro::before{
+    content: "portfolio";
+}
+#abo::before{
+    content: "about";
+}
+.pr1,.pr2,.pr3{
+    background-color: white;
+    margin: 20px;
+}
+.grid img{
+    width: 100%;
+}
+.tx{
+    padding: 20px;
+}
+.tx p{
+    color: rgba(151, 151, 151, 0.719);
+    font-size: 14px;
+    margin-top: 10px;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.img::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    background-color: var(--background);
+    transform: translateY(-10%);
+    left: 30px;
+    height: 110%;
+}
+.img::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    bottom: 30px;
+    right: 15px;
+    height: 100%;
+    background-color: var(--light-green);
+}
+.img img{
+    z-index: 2;
+    width: 230px;
+    height: 350px;
+}
+.grid2{
+    padding: 30px 10px;
+    display: grid;
+    grid-template-columns: 350px 50%;justify-content: space-between;
+
+}
+.lg{
+    position: absolute;
+    width: 70px;
+    bottom: 30px;
+    right: -45px;
+    height: 50px;
+    background-color: var(--light-green);
+}
+.sidetext p{
+    font-weight: 700;
+    line-height: 2.5;
+    word-spacing: 2px;
+}
+.sidetext p:last-child{
+    color: rgba(151, 151, 151, 0.719);
+    font-weight: 400;
+}
+hr{
+    font-weight: 200;
+    width: 50%;
+    height: 2px;
+    margin: 50px 0;
+    border: none;
+    background-color: var(--light-green);
+}
+.contact{
+    background-color: var(--background);
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 30px;
+}
+.text3 h1{
+    color: var(--soft-black);
+    word-spacing: -5px;
+}
+.text3 a{
+    color: var(--light-green);
+    font-size: 40px;
+    font-weight: 900;
+}
+footer{
+    background-color: var(--soft-black);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#con::before{
+    content: "contact";
+}
+span{
+    color: var(--light-green);
+    font-size: 18px;
+}
+.text3 i:hover{
+    color: var(--light-green);
+    transform: scale(.8);
+    cursor: pointer;
+    transition-duration: .5s;
+    transition-property: transform;
+}
+@media (max-width:767px){
+    .services,.grid,.grid2{
+        grid-template-columns: repeat(1,100%);
+    }
+    .c1 div,.c2 div{
+        width: 100%;
+    }
+    .text2{
+        display: inline-block;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .project,.contact{
+        padding: 50px 0;
+    }
+    .contact{
+        line-height: 2.5;
+    }
+    .img::before,.img::after,.lg{
+        display: none;
+    }
+    hr{
+        transform: translateX(50%);
+    }
+    #serv::before,#pro::before,#abo::before,#con::before{
+        font-size: 50px;
+        bottom: -5px;
+    }
+    .text3 a{
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    .services i,.section i{
+        margin-top: 35px;
+        font-weight: 800;
+    }
+    .img img{
+        margin-bottom: 40px ;
+    }
+    .text3 h1{
+        font-size: 20px;
+    }
+}
